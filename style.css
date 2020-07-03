@@ -36,8 +36,15 @@ a:hover{
 }
 
 .navbar ul li a:hover::before {
-  width: 100%;
-  left: 0px;
+  content: "";
+  height: 2px;
+  background-color: rgb(236, 241, 250);
+  width: 0%;
+  position: absolute;
+  right: 0px;
+  bottom: -27px;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .navbar ul li a.active::before {
@@ -276,14 +283,13 @@ h1 {
   .hamburger .fa {
     display: inline-block;
   }
-
   .navbar {
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    display: none;
+    width: 100%;
   }
 
-  .navbar {
+  .navbar .show {
     display: block;
   }
 
@@ -295,12 +301,12 @@ h1 {
 
   .navbar ul li a {
     line-height: 42px;
-    color: #01143e;
+    color: #04172A;
   }
 
   .navbar ul li a::before {
     bottom: -3px;
-    background-color: #01143e;
+    background-color: #FFFFFF;
   }
 
   .service-content .box {
